@@ -38,7 +38,7 @@ app.post("/otp", (req, res) => {
     },
     (err, infor) => {
       if (err) {
-        res.status(200).json({ otp: "server error" });
+        res.status(200).json({ otp: "server error",err });
       } else {
         res.status(200).json({ otp });
       }
