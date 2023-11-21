@@ -12,12 +12,14 @@ const getOTP = (min, max) => {
 };
 
 // send email
-const fromEmail = "fitnessmiran@gmail.com";
+const fromEmail = "fitnessmiran@outlook.com";
 const mailServer = mail.createTransport({
-  service: "gmail",
+  host: 'smtp.office365.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
   auth: {
     user: fromEmail,
-    pass: "Aa123456#",
+    pass: "Miraf123#",
   },
 });
 
